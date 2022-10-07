@@ -20,8 +20,9 @@ Chatter uses a two-protocol communication style:
 - HTTP for server control, 
 - TCP WebSocket for asynchronous server responses. 
 Such architecture provides convienient separation of control and broadcasting data flow, combining best of both worlds - HTTP transactions and error notifications along with WS agility. 
- - HTTP data flow: CLIENT -> SERVER, transaction result handling in app protocol layer
- - WS   data flow: SERVER -> CLIENT, no transaction result handling in app protocol layer (only TCP handshake) 
+Data flow:
+ - HTTP: CLIENT -> SERVER, transaction result handling in app protocol layer
+ - WS  : SERVER -> CLIENT, no transaction result handling in app protocol layer (only TCP handshake) 
 
  The client uses HTTP to send messages, joining/leaving rooms, registration, heartbeat service.                    
  The server uses WebSockets to transfer messages to listening clients with room distingishing.
