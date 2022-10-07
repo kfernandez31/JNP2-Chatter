@@ -20,11 +20,12 @@ You can find a more in-depth description [**here**](https://github.com/kfernande
 
 
 ## Running the app
-You can run a single instance of the server using this command in your terminal:
+You can run a single instance of the server like this:
 ```
-cargo run --bin server
+cargo run --bin server <address>
 ```
-and multiple clients like so:
+where the <address> (ex. 0.0.0.0) is optional and replaced by a default value if not provided.
+Multiple clients can be run like so:
 ```
 cargo run --bin server
 ```
