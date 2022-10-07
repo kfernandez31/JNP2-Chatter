@@ -16,10 +16,12 @@ Chat history for each room is stored in hidden a directory created by the app un
 
  - Communication architecture - 
 
- chatter users 2 protocol communication style. HTTP for server control, and TCP WebSocket for asynchronous server responses. Such architecture provide convienient separation of control and broadcast data flow. Reduces also amount of required code, combining best of both worlds - HTTP transactions and error notifications with WS agility. 
+Chatter uses a two-protocol communication style:
+- HTTP for server control, 
+- TCP WebSocket for asynchronous server responses. 
+Such architecture provides convienient separation of control and broadcasting data flow, combining best of both worlds - HTTP transactions and error notifications along with WS agility. 
+ - HTTP data flow: CLIENT -> SERVER, transaction result handling in app protocol layer
+ - WS   data flow: SERVER -> CLIENT, no transaction result handling in app protocol layer (only TCP handshake) 
 
- - HTTP data flow: CLIENT -> SERVER, transaction result handling on app protocol layer
- - WS   data flow: SERVER -> CLIENT, no transaction result handling on app protocol layer (only TCP handshake) 
-
- Client uses HTTP to send messages, room joining/leaving, registration, client life notification service                    
- Server uses websockets to transfer messages to listening clients with room distingishing 
+ The client uses HTTP to send messages, joining/leaving rooms, registration, heartbeat service.                    
+ The server uses WebSockets to transfer messages to listening clients with room distingishing.
