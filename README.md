@@ -24,7 +24,7 @@ You can run a single instance of the server like this:
 ```
 cargo run --bin server <address>
 ```
-where the <address> (ex. 0.0.0.0) is optional and replaced by a default value if not provided.
+where the `<address>` (ex. 0.0.0.0) is optional and replaced by a default value if not provided.
 Multiple clients can be run like so:
 ```
 cargo run --bin server
