@@ -18,8 +18,10 @@ Chat history for each room is stored in hidden a directory created by the app un
 
 Chatter uses a two-protocol communication style:
 - HTTP for server control, 
-- TCP WebSocket for asynchronous server responses. 
+- WebSockets for asynchronous server responses. 
+
 Such architecture provides convienient separation of control and broadcasting data flow, combining best of both worlds - HTTP transactions and error notifications along with WS agility. 
+
 Data flow:
  - HTTP: CLIENT -> SERVER, transaction result handling in app protocol layer
  - WS: SERVER -> CLIENT, no transaction result handling in app protocol layer (only TCP handshake) 
