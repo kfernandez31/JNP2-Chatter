@@ -16,7 +16,7 @@ The project I decided to write was a simple command-line multi-room chat applica
 
 # Full description 
 
-You can find a more in-depth description [**here**](https://github.com/kfernandez31/JNP2-Rust-Chatter/blob/main/tdescription.md).
+You can find a more in-depth description [**here**](https://github.com/kfernandez31/JNP2-Rust-Chatter/blob/main/description.md).
 
 
 ## Running the app
